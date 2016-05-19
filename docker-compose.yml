@@ -6,3 +6,10 @@ services:
       context: .
     volumes:
       - .:/code
+    volumes_from:
+      - elm-stuff
+
+  elm-stuff:
+    image: busybox
+    volumes:
+      - /code/elm-stuff
