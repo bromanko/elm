@@ -40,11 +40,11 @@ function start {
 
 function cmd {
   shift
-  docker-compose run --rm ${DEV_IMAGE} $@
+  docker-compose run --rm --service-ports ${DEV_IMAGE} $@
 }
 
 function shell {
-  docker-compose run --rm --entrypoint bash ${DEV_IMAGE}
+  docker-compose run --rm --service-ports --entrypoint bash ${DEV_IMAGE}
 }
 
 parse_args "$@"
