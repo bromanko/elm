@@ -10,7 +10,6 @@ services:
       - elm-stuff
     ports:
       - "8000:8000"
-    command: reactor -a 0.0.0.0
 
   elm-stuff:
     image: busybox
