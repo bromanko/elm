@@ -35,7 +35,8 @@ function parse_args {
 }
 
 function start {
-  docker-compose up
+  docker-compose run --rm ${DEV_IMAGE} package install -y
+  docker-compose run --rm --service-ports ${DEV_IMAGE}
 }
 
 function cmd {
